@@ -18,14 +18,16 @@ command :deploy do |c|
     end
 end
 
-command :clear do |c|
-    c.syntax = 'jekyll-ftp clear [options]'
+command :clean do |c|
+    c.syntax = 'jekyll-ftp clean [options]'
     c.summary = ''
     c.description = ''
     c.example 'description', 'command example'
     c.option '--some-switch', 'Some switch that does something'
     c.action do |args, options|
-        # Do something or c.when_called Jekyll-ftp::Commands::Clear
+#        ftp = Net::FTP.new(server)
+#        ftp.login(username, password)
+#        Jekyll_FTP::Command.clean(ftp)
     end
 end
 

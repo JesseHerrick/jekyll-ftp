@@ -7,10 +7,10 @@ module Jekyll_FTP
 					ftp.chdir file
 					clean(ftp)
 					ftp.chdir '..'
-					puts "    Deleting directory: ".red + ftp.pwd + "/" + file
+					puts "Deleting directory: ".red + ftp.pwd + "/" + file + "/"
 					ftp.rmdir(file)
 				else
-					puts "    Deleting: ".red + ftp.pwd + "/" + file
+					puts "Deleting: ".red + ftp.pwd + "/" + file
 					ftp.delete(file)
 				end
 			end
