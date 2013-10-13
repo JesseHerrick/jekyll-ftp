@@ -6,7 +6,7 @@ require 'rubygems'
 require 'commander/import'
 require 'jekyll-ftp.rb'
 
-program :version, '0.0.1'
+program :version, Jekyll_FTP::VERSION
 program :description, 'Jekyll deployment made easy.'
  
 command :deploy do |c|
@@ -20,10 +20,9 @@ end
 
 command :clean do |c|
     c.syntax = 'jekyll-ftp clean [options]'
-    c.summary = ''
-    c.description = ''
-    c.example 'description', 'command example'
-    c.option '--some-switch', 'Some switch that does something'
+    c.summary = 'Just remove all files in the given remote directory.'
+    c.description = c.summary
+    c.example 'Remove the files in the preconfigured directory.', 'jekyll-ftp clean'
     c.action do |args, options|
         Jekyll_FTP::Command.deploy(false)
     end
