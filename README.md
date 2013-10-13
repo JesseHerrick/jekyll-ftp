@@ -5,7 +5,9 @@
 * `jekyll-ftp clean` - Remove all the files from the preconfigured `remote_dir`.
 
 ## Configuring your `_config.yml` File
-Since [Jekyll](https://github.com/mojombo/jekyll) uses `_config.yml`, Jekyll-FTP uses this too. To configure Jekyll-FTP needs 3 configuration settings.
+Since [Jekyll](https://github.com/mojombo/jekyll) uses `_config.yml`, Jekyll-FTP uses this too.
+
+Jekyll-FTP needs 3 configuration settings:
 * `username` - Your FTP server username.
 * `server_url` - The URL for your FTP server (can also be an FTP).
 * `remote_dir` - The remote directory where your site is to be deployed.
