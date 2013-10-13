@@ -19,7 +19,7 @@ module Jekyll_FTP
 					missing = Array.new
 					# If server doesn't exist add it to the array of missing stuff.
 					if server.nil?
-						missing.push("server")
+						missing.push("server_url")
 					end
 					# If username doesn't exist add it to the array of missing stuff.
 					if username.nil?

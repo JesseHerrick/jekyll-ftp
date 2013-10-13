@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'jekyll-ftp/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "bukkit"
+  spec.name          = "jekyll-ftp"
   spec.version       = Jekyll_FTP::VERSION
   spec.authors       = ["Jesse Herrick"]
   spec.email         = ["jessegrantherrick@gmail.com"]
