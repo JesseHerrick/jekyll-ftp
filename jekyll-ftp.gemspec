@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jessegrantherrick@gmail.com"]
   spec.description   = %q{Jekyll deployment made easy.}
   spec.summary       = %q{Deploy your Jekyll site to FTP with one simple command!}
-  spec.homepage      = "https://github.com/JesseHerrick/bukkit"
+  spec.homepage      = "https://github.com/JesseHerrick/jekyll-ftp"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
