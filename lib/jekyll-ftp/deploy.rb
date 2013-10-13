@@ -34,12 +34,17 @@ module Jekyll_FTP
 					Jekyll_FTP::Error.config_error(missing)
 				end
 
+				# Give some info about the FTP server.
+				say "      FTP Server: ".blue + server
+				say "        Username: ".blue + username
+				say "Remote Directory: ".blue + remote_dir
+
 				# Error handling over...
 				# Now deploy!
-				say "Deploying!".yellow unless deploy_now == false
 				ftp = Net::FTP.new(server)
 				ftp.login(username, password)
 				ftp.chdir(remote_dir)
+				say "\nDeploying...".yellow unless deploy_now == false
 
 				# Delete old files.
 				if File.directory?("_site")

@@ -10,7 +10,7 @@ program :version, Jekyll_FTP::VERSION
 program :description, 'Jekyll deployment made easy.'
  
 command :deploy do |c|
-    c.syntax = 'jekyll-ftp deploy [options]'
+    c.syntax = 'jekyll-ftp deploy'
     c.summary = 'Deploy your site via FTP with the preconfigured server settings.'
     c.description = 'Deploy your site via FTP.'
     c.action do |args, options|
@@ -19,7 +19,7 @@ command :deploy do |c|
 end
 
 command :clean do |c|
-    c.syntax = 'jekyll-ftp clean [options]'
+    c.syntax = 'jekyll-ftp clean'
     c.summary = 'Just remove all files in the given remote directory.'
     c.description = c.summary
     c.example 'Remove the files in the preconfigured directory.', 'jekyll-ftp clean'
