@@ -25,9 +25,7 @@ command :clean do |c|
     c.example 'description', 'command example'
     c.option '--some-switch', 'Some switch that does something'
     c.action do |args, options|
-#        ftp = Net::FTP.new(server)
-#        ftp.login(username, password)
-#        Jekyll_FTP::Command.clean(ftp)
+        Jekyll_FTP::Command.deploy(false)
     end
 end
 

@@ -1,5 +1,5 @@
 module Jekyll_FTP
-	class Command
+	class SubCommand
 		def self.clean(ftp)
 			ftp.nlst.each do |file|
 				next if ['.', '..'].include?(file)

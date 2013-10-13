@@ -3,7 +3,7 @@ require 'net/ftp'
 
 module Jekyll_FTP
 	class Command
-		def self.deploy
+		def self.deploy(deploy_now = true)
 			if File.exists?("_config.yml")
 				# The file is there and will now be parsed.
 				$config = YAML.load_file("_config.yml")
@@ -30,34 +30,35 @@ module Jekyll_FTP
 						missing.push("remote_dir")
 					end
 
-						# Pass the missing array to 'config_error'.
-						Jekyll_FTP::Error.config_error(missing)
-					end
+					# Pass the missing array to 'config_error'.
+					Jekyll_FTP::Error.config_error(missing)
+				end
 
-					# Error handling over...
-					# Now deploy!
-					say "Deploying!".yellow
-					ftp = Net::FTP.new(server)
-					ftp.login(username, password)
-					ftp.chdir(remote_dir)
+				# Error handling over...
+				# Now deploy!
+				say "Deploying!".yellow unless deploy_now == false
+				ftp = Net::FTP.new(server)
+				ftp.login(username, password)
+				ftp.chdir(remote_dir)
 
-					# Delete old files.
-					if File.directory?("_site")
-						Jekyll_FTP::Command.clean(ftp)
-					else
-						say "ERROR: _site directory does not exist."
-						abort "Have you tried `jekyll build`?".yellow
-					end
+				# Delete old files.
+				if File.directory?("_site")
+					Jekyll_FTP::SubCommand.clean(ftp)
+				else
+					say "ERROR: _site directory does not exist."
+					abort "Have you tried `jekyll build`?".yellow
+				end
 
-					# Deploy the site.
+				# Deploy the site... unless not supposed to deploy.
+				unless deploy_now == false
 					Dir.chdir("_site")
 					path = Dir.getwd
 					Jekyll_FTP::SubCommand.send(ftp, path)
-					ftp.quit
-				else
-					# The file is missing!
-					Jekyll_FTP::Error.file_missing("_config.yml")
 				end
+			else
+				# The file is missing!
+				Jekyll_FTP::Error.file_missing("_config.yml")
 			end
 		end
 	end
+end
