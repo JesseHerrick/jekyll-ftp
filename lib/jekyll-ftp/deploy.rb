@@ -9,7 +9,7 @@ module Jekyll_FTP
 				$config = YAML.load_file("_config.yml")
 
 				# Create variables from the config hash.
-				server = $config["server"]
+				server = $config["server_url"]
 				username = $config["username"]
 				remote_dir = $config["remote_dir"]
 
