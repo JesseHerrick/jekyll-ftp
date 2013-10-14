@@ -41,9 +41,11 @@ module Jekyll_FTP
 
 				# Error handling over...
 				# Now deploy!
+				say "Logging in...".yellow
 				ftp = Net::FTP.new(server)
 				ftp.login(username, password)
 				ftp.chdir(remote_dir)
+				say "Logged in!".green
 				say "\nDeploying...".yellow unless deploy_now == false
 
 				# Delete old files.
