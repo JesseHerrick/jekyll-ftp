@@ -1,5 +1,7 @@
 # Jekyll-FTP
 
+![Version](https://badge.fury.io/rb/jekyll-ftp.png)
+
 ## Commands
 * `jekyll-ftp deploy` - Deploy your site via FTP with the preconfigured settings.
 * `jekyll-ftp clean` - Remove all the files from the preconfigured `remote_dir`.
