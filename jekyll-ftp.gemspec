@@ -18,6 +18,10 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency('colorize')
-  spec.add_dependency('commander')
+  spec.add_runtime_dependency('colorize')
+  spec.add_runtime_dependency('commander')
+  spec.add_runtime_dependency('jekyll')
+
+  spec.add_development_dependency('bundler')
+  spec.add_development_dependency('rake')
 end
