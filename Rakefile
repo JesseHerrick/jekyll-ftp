@@ -20,6 +20,7 @@ desc "Default task."
 task :default do
     `rake version`
     puts "Gem seems to be in tip top shape!".green
+    puts "Run: ".yellow + "`jekyll-ftp --help` to list all commands."
 end
 
 desc "Build gem."
