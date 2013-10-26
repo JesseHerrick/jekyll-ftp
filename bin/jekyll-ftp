@@ -3,6 +3,7 @@
 $: << File.expand_path(File.dirname(__FILE__) + "/../lib")
 
 require 'rubygems'
+require 'bundler/setup'
 require 'commander/import'
 require 'jekyll-ftp.rb'
 

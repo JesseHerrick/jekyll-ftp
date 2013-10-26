@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-ftp (0.1.1)
+    jekyll-ftp (0.2.0)
       colorize
       commander
       jekyll
