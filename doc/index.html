@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.7.3
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><div id='filecontents'><h1>Jekyll-FTP</h1>
+
+<p><img src="https://badge.fury.io/rb/jekyll-ftp.png" alt="Version">
+<a href="https://travis-ci.org/JesseHerrick/jekyll-ftp"><img src="https://travis-ci.org/JesseHerrick/jekyll-ftp.png?branch=master" alt="Build Status"></a></p>
+
+<h2>Commands</h2>
+
+<ul>
+<li><code>jekyll-ftp deploy</code> - Deploy your site via FTP with the preconfigured settings.</li>
+<li><code>jekyll-ftp clean</code> - Remove all the files from the preconfigured <code>remote_dir</code>.</li>
+</ul>
+
+<h2>Configuring your <code>_config.yml</code> File</h2>
+
+<p>Since <a href="https://github.com/mojombo/jekyll">Jekyll</a> uses <code>_config.yml</code>, Jekyll-FTP uses this too.</p>
+
+<p>Jekyll-FTP needs 3 configuration settings:
+* <code>username</code> - Your FTP server username.
+* <code>server_url</code> - The URL for your FTP server (can also be an FTP).
+* <code>remote_dir</code> - The remote directory where your site is to be deployed.</p>
+
+<pre class="code yaml"><code class="yaml">username: UserName
+server_url: ftp.myserver.com
+remote_dir: /public_html
+</code></pre>
+
+<p>If you still don&#39;t get it, <a href="https://gist.github.com/JesseHerrick/6965950">here&#39;s an example</a>.</p>
+</div></div>
+
+    <div id="footer">
+  Generated on Mon Dec 16 16:24:41 2013 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.3 (ruby-2.0.0).
+</div>
+
+  </body>
+</html>
