@@ -2,16 +2,13 @@ require File.join([File.dirname(__FILE__),'lib','jekyll-ftp','version.rb'])
 spec = Gem::Specification.new do |s| 
   s.name = 'jekyll-ftp'
   s.version = JekyllFTP::VERSION
-  s.author = 'Your Name Here'
-  s.email = 'your@email.address.com'
-  s.homepage = 'http://your.website.com'
+  s.author = 'Jesse Herrick'
+  s.email = 'jessegrantherrick@gmail.com'
+  s.homepage = 'http://www.jessegrant.net'
   s.platform = Gem::Platform::RUBY
-  s.summary = 'A description of your project'
+  s.summary = 'Jekyll deployment with FTP made easy.'
   s.files = `git ls-files`.split("\n")
   s.require_paths << 'lib'
-  s.has_rdoc = true
-  s.extra_rdoc_files = ['README.rdoc','jekyll-ftp.rdoc']
-  s.rdoc_options << '--title' << 'jekyll-ftp' << '--main' << 'README.rdoc' << '-ri'
   s.bindir = 'bin'
   s.executables << 'jekyll-ftp'
 
@@ -20,7 +17,10 @@ spec = Gem::Specification.new do |s|
   s.add_development_dependency('rdoc')
   s.add_development_dependency('cucumber')
   s.add_development_dependency('aruba')
+  s.add_development_dependency('bundler')
 
   # Runtime Dependencies
-  s.add_runtime_dependency('thor')
+  s.add_runtime_dependency('commander')
+  s.add_runtime_dependency('colorize')
+  s.add_runtime_dependency('jekyll')
 end
