@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+
+$:.unshift File.join(File.dirname(__FILE__), *%w{ .. lib })
+
+require 'rubygems'
+require 'commander/import'
+
+require 'jekyll-ftp.rb'
+
+program :version, '0.0.1'
+program :description, 'Jekyll deployment to FTP made easy.'
+ 
+command :deploy do |c|
+  c.syntax = 'jekyll-ftp deploy [options]'
+  c.summary = 'Deploy a site recursively.'
+  c.description = 'Deploy a site recursively to FTP.'
+  c.example 'Build jekyll site and deploy.', 'jekyll-ftp deploy'
+  c.example 'Deploy jekyll site without building.', 'jekyll-ftp deploy --no-build'
+  c.option '-n', '--no-build', 'Some switch that does something'
+  c.option '-c', '--config', 'Specify the _config.yml file.'
+  c.action do |args, options|
+    options = { :no_build => options.no_build }
+    
+    JekyllFTP::Command.deploy(options)
+  end
+end
+
+command :clean do |c|
+  c.syntax = 'jekyll-ftp clean [options]'
+  c.summary = ''
+  c.description = ''
+  c.example 'description', 'command example'
+  c.option '--some-switch', 'Some switch that does something'
+  c.action do |args, options|
+    options = { }
+
+    JekyllFTP::Command.clean(options)
+  end
+end
+
