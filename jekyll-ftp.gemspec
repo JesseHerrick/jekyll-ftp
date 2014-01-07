@@ -14,13 +14,13 @@ spec = Gem::Specification.new do |s|
 
   # Development Dependencies
   s.add_development_dependency('rake')
-  s.add_development_dependency('rdoc')
+  s.add_development_dependency('bundler')
   s.add_development_dependency('cucumber')
   s.add_development_dependency('aruba')
-  s.add_development_dependency('bundler')
+  s.add_development_dependency('fake_ftp')
 
   # Runtime Dependencies
   s.add_runtime_dependency('commander')
-  s.add_runtime_dependency('colorize')
   s.add_runtime_dependency('jekyll')
+  s.add_runtime_dependency('colorize')
 end
