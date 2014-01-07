@@ -1,6 +1,0 @@
-lib/jekyll-ftp.rb bad0efec9255290622a61f3ad0cccb92cd2f5587
-lib/jekyll-ftp/send.rb 725eca0d79fb0d29277b1fde0afc4eff93b277aa
-lib/jekyll-ftp/clean.rb d20f993129c5d3792344244e6bdacdeba4278914
-lib/jekyll-ftp/error.rb e19d030fb47e421de53bfb035212cbbe3db1cefa
-lib/jekyll-ftp/deploy.rb c66b07673ed8953a4b9b71b6c47d1beba2abe7fd
-lib/jekyll-ftp/version.rb dc9c98df4d240c4679251a86ff2823a1331465a9
