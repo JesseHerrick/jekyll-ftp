@@ -17,9 +17,12 @@ command :deploy do |c|
   c.example 'Build jekyll site and deploy.', 'jekyll-ftp deploy'
   c.example 'Deploy jekyll site without building.', 'jekyll-ftp deploy --no-build'
   c.option '-n', '--no-build', 'Some switch that does something'
-  c.option '-c', '--config', 'Specify the _config.yml file.'
+  c.option '-c', '--config FILE', 'Specify the _config.yml file.'
   c.action do |args, options|
-    options = { :no_build => options.no_build }
+    options = { 
+      :no_build => options.no_build, 
+      :config => options.config
+    }
     
     JekyllFTP::Command.deploy(options)
   end

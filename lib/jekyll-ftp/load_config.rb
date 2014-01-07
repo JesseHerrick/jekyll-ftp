@@ -14,7 +14,7 @@ module JekyllFTP
 		missing = []
 
 		# Checks if config contains a certain key, then adds it to the missing array if false.
-		def check_config_for(key)
+		def self.check_config_for(key)
 			if config_file["#{key}"].nil?
 				missing << "#{key}"
 			end
