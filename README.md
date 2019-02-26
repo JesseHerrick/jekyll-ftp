@@ -11,7 +11,7 @@ Add the gem to your `Gemfile`.
 ```ruby
 # Gemfile
 
-gem `jekyll-ftp`
+gem 'jekyll-ftp'
 ```
 
 Add the gem to your `plugins` in your `_config.yml`.
